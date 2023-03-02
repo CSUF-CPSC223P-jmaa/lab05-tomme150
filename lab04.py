@@ -19,6 +19,10 @@ def summation(n, term):
     True
     """
     assert n >= 1
+    if n == 1:
+        return term(n)
+    else:
+        return term(n) + summation(n - 1, term)
     "*** YOUR CODE HERE ***"
 
 
